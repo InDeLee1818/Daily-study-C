@@ -6,7 +6,7 @@
 //两个指针相减
 
 
-
+/*
 unsigned int my_strlen(const char* s)
 {
 	const char* pointer1 = s;					//pointer1指向s
@@ -27,6 +27,29 @@ int main()
 	int num;
 	num = my_strlen("hellolouisli");			//调用my_strlen，把hellolouisli传给s，即s指向hellolouisli
 	printf("num = %d\n", num);
+
+	return 0;
+}
+*/
+
+//method 2:
+unsigned int my_strlen(const char* s)
+{
+	int i = 0;
+	const char* p = s;
+	while (*p != '\0')
+	{
+		p++;
+		i++;
+	}
+	return i;
+}
+
+int main()
+{
+	int digit;
+	digit = my_strlen("runningtheprogram");
+	printf("digit = %d\n", digit);
 
 	return 0;
 }
